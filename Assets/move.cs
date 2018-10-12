@@ -41,7 +41,7 @@ public class move : MonoBehaviour
         {
             jump = 0;
         }
-        anim.SetInteger("jump", jump);
+        anim.SetInteger("jump", jump); 
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime *300f, 0);
 
@@ -51,7 +51,7 @@ public class move : MonoBehaviour
             {
    
                 rb.AddRelativeForce(0f, 200f, 0f); // The sphere will jump
-                //onGround = false; // The sphere can't jump if it's in the air
+                onGround = false; // The sphere can't jump if it's in the air
             }
             
         }
