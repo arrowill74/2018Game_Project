@@ -11860,6 +11860,11 @@ Prefab:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 20342775275333292, guid: 2d8db3bc67a55034b88c61e1d3c1899c,
+        type: 2}
+      propertyPath: field of view
+      value: 90.23657
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8db3bc67a55034b88c61e1d3c1899c, type: 2}
   m_IsPrefabAsset: 0
@@ -13903,7 +13908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4284559921054498, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.32556805
       objectReference: {fileID: 0}
     - target: {fileID: 4284559921054498, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -13911,15 +13916,40 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4284559921054498, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9455186
       objectReference: {fileID: 0}
     - target: {fileID: 4284559921054498, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4284559921054498, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1518330210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1577250194802462, guid: 3a21658b72283be4f8ad6c27640b73a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1518330209}
+--- !u!114 &1518330211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518330210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d33e00fda33a094db6db11dfbd4465e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFloor: {x: -14.847, y: -0.001, z: -15.108}
+  onChair: {x: -13.43, y: 1.209, z: -15.108}
+  onTable: {x: -15.46, y: 1.719, z: -12.72}
+  minTimeToChange: 2
+  maxTimeToChange: 10
 --- !u!1001 &1525778603
 Prefab:
   m_ObjectHideFlags: 0
