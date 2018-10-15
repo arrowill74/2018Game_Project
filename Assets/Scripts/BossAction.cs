@@ -29,7 +29,7 @@ public class BossAction : MonoBehaviour {
 
 		} else if (positionToChange.Equals(onChair)) {
 			int randomNum = Random.Range(0, 2);
-			Debug.Log(randomNum);
+			//Debug.Log(randomNum);
 			if (randomNum == 0) {
 				positionToChange = onFloor;
 			} else {
