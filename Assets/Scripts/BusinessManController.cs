@@ -8,6 +8,7 @@ public class BusinessManController : MonoBehaviour {
     private Quaternion initRot;
     private Rigidbody rigidBody;
     private Animator anim;
+    private int health;
     private bool onChair;
 
     //public variables
@@ -22,6 +23,7 @@ public class BusinessManController : MonoBehaviour {
         initPos = transform.position;
         initRot = transform.rotation;
         onChair = true;
+        health = 0;
         //Debug.Log("initPos = " + initPos);
     }
 
@@ -39,6 +41,7 @@ public class BusinessManController : MonoBehaviour {
                 this.transform.LookAt(lookAt);
                 if (Input.GetKey(KeyCode.F)) {
                     anim.SetBool("Hit", true);
+                    
                 } else {
                     anim.SetBool("Hit", false);
                 }
