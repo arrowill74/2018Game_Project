@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour {
     public Animator anim;
     public int walk = 0;
     public int jump = 0;
+    public bool isKissing = false;
 
     // Use this for initialization
     void Start() {
