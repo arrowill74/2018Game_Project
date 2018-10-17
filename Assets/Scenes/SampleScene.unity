@@ -12133,7 +12133,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-
     - target: {fileID: 1549922588413376, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_TagString
       value: Player
@@ -12471,28 +12470,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f3d3d9be39ab0364eb9c3f2620013ceb,
     type: 3}
   m_PrefabInternal: {fileID: 1212540247}
---- !u!1 &1216160879 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1577250194802462, guid: 3a21658b72283be4f8ad6c27640b73a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1518330209}
---- !u!114 &1216160880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1216160879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d33e00fda33a094db6db11dfbd4465e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onFloor: {x: -14.847, y: -0.001, z: -15.108}
-  onChair: {x: -13.43, y: 1.209, z: -15.108}
-  onTable: {x: -15.46, y: 1.719, z: -12.72}
-  minTimeToChange: 2
-  maxTimeToChange: 10
-  businessManScript: {fileID: 0}
 --- !u!1 &1219206771
 GameObject:
   m_ObjectHideFlags: 0
@@ -13378,6 +13355,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324d5c0a1fd8bea45886b1b12d6380ac, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1346689907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114472228270883158, guid: 324d5c0a1fd8bea45886b1b12d6380ac,
+    type: 2}
+  m_PrefabInternal: {fileID: 1346689906}
+  m_Script: {fileID: 11500000, guid: faa5bb2808f72dc498211163ca980a24, type: 3}
 --- !u!1001 &1381740029
 Prefab:
   m_ObjectHideFlags: 0
@@ -14351,8 +14334,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114963384265398482, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
+    - target: {fileID: 114013719601712708, guid: 3a21658b72283be4f8ad6c27640b73a3,
+        type: 2}
+      propertyPath: businessManScript
+      value: 
+      objectReference: {fileID: 1346689907}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a21658b72283be4f8ad6c27640b73a3, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1525778603

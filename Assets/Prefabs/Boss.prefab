@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4284559921054498}
   - component: {fileID: 95684389912015274}
   - component: {fileID: 64946543977015942}
-  - component: {fileID: 114963384265398482}
+  - component: {fileID: 114013719601712708}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -423,7 +423,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114963384265398482
+--- !u!114 &114013719601712708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,6 +439,7 @@ MonoBehaviour:
   onTable: {x: -15.46, y: 1.719, z: -12.72}
   minTimeToChange: 2
   maxTimeToChange: 10
+  businessManScript: {fileID: 0}
 --- !u!137 &137994030363982842
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class BusinessManController : MonoBehaviour {
     public GameObject FollowTarget; //look toward Player
     public CollisionListScript PlayerSensor;
     public GameObject heartParticle;
+    public bool isKissing;
 
     // Use this for initialization
     void Start() {
@@ -25,6 +26,7 @@ public class BusinessManController : MonoBehaviour {
         onChair = true;
         alive = true;
         health = 0;
+        isKissing = false;
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class BusinessManController : MonoBehaviour {
                 }else{
                     if(Input.GetKey(KeyCode.F) && lookEachOther()){
                         anim.SetBool("Hit", true);
+                        isKissing = true;
                         health += Time.deltaTime;
                         Debug.Log("health = " + health);
                         if(health > 5){
@@ -45,6 +48,7 @@ public class BusinessManController : MonoBehaviour {
                         }
                     }else{
                         anim.SetBool("Hit", false);
+                        isKissing = false;
                     }
                 }
             }else{
@@ -91,6 +95,7 @@ public class BusinessManController : MonoBehaviour {
 
     void dead() {
         anim.SetBool("Hit", false);
+        isKissing = false;
         anim.SetTrigger("Dead");
         heartParticle.SetActive(true);
         alive = false;

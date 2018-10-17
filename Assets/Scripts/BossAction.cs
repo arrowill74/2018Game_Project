@@ -30,9 +30,9 @@ public class BossAction : MonoBehaviour {
 	}
 
 	void Update () {
-		// if(this.gameObject.transform.position.Equals(onTable) && businessManScript.isKissing) {
-		// 	SceneManager.LoadScene("GameOverScene");
-		// }
+		if(this.gameObject.transform.position.Equals(onTable) && businessManScript.isKissing) {
+			SceneManager.LoadScene("GameOverScene");
+		}
 	}
 
 	private int getChangePositionTime() {
