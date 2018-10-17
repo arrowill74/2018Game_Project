@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour {
         }
         anim.SetInteger("jump", jump);
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 300f, 0);
+        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 100f, 0);
 
         if (onGround == true) // If the sphere is grounded
         {

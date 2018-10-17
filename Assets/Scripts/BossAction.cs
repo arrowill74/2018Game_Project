@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BossAction : MonoBehaviour {
+
 	// public variables
 	public Vector3 onFloor = new Vector3(-14.847f, -0.001f, -15.108f);
 
