@@ -12103,15 +12103,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.92
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12131,6 +12131,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.12751894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99183613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 14.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951993630849086, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

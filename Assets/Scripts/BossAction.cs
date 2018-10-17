@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossAction : MonoBehaviour {
+    private Animator anim;
 
-	public Vector3 onFloor = new Vector3(-14.847f, -0.001f, -15.108f);
+    public Vector3 onFloor = new Vector3(-14.847f, -0.001f, -15.108f);
 
 	public Vector3 onChair = new Vector3(-13.43f, 1.209f, -15.108f);
 
@@ -44,7 +45,8 @@ public class BossAction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.positionToChange = this.onFloor;
+        anim = this.GetComponent<Animator>();
+        this.positionToChange = this.onFloor;
 		this.gameObject.transform.position = this.positionToChange;
 
 		Invoke("changePosition", this.getChangePositionTime());
