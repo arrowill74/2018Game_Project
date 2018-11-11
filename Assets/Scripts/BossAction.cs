@@ -7,15 +7,10 @@ public class BossAction : MonoBehaviour {
 
 	// public variables
 	public Vector3 onFloor = new Vector3(-14.847f, -0.001f, -15.108f);
-
 	public Vector3 onChair = new Vector3(-13.43f, 1.209f, -15.108f);
-
 	public Vector3 onTable = new Vector3(-15.46f, 1.719f, -12.72f);
-
 	public int minTimeToChange = 2;
-
 	public int maxTimeToChange = 10;
-
 	public BusinessManController businessManScript;
 
 	// private variables
