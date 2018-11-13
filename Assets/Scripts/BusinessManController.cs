@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +17,7 @@ public class BusinessManController : MonoBehaviour {
     public CollisionListScript PlayerSensor;
     public GameObject heartParticle;
     public bool isKissing;
+    public GameObject girlfriend;
 
     // Use this for initialization
     void Start() {
@@ -42,7 +43,7 @@ public class BusinessManController : MonoBehaviour {
                         anim.SetBool("Hit", true);
                         isKissing = true;
                         health += Time.deltaTime;
-                        Debug.Log("health = " + health);
+                        // Debug.Log("health = " + health);
                         if(health > 5){
                             dead();
                         }
