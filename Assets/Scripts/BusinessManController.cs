@@ -10,15 +10,16 @@ public class BusinessManController : MonoBehaviour {
     private float health;
     private bool onChair;
     private bool alive;
-
+    private bool isKissing;
+  
     //public variables
     public Vector3 onGroundPos; //set the ground position
     public GameObject FollowTarget; //look toward Player
     public CollisionListScript PlayerSensor;
     public GameObject heartParticle;
-    public bool isKissing;
     public GameObject girlfriend;
     public GameObject chair;
+
 
     // Use this for initialization
     void Start() {
