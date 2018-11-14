@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,15 +8,18 @@ public class BusinessManController : MonoBehaviour {
     private Quaternion initRot;
     private Animator anim;
     private float health;
-
+    private bool onChair;
+    private bool alive;
+    private bool isKissing;
+  
     //public variables
     public Vector3 onGroundPos; //set the ground position
     public GameObject FollowTarget; //look toward Player
     public CollisionListScript PlayerSensor;
     public GameObject heartParticle;
-    public bool isKissing { get; private set; }
-    public bool onChair { get; private set; }
-    public bool alive { get; private set; }
+    public GameObject girlfriend;
+    public GameObject chair;
+
 
     // Use this for initialization
     void Start() {
@@ -42,7 +45,7 @@ public class BusinessManController : MonoBehaviour {
                         anim.SetBool("Hit", true);
                         isKissing = true;
                         health += Time.deltaTime;
-                        Debug.Log("health = " + health);
+                        // Debug.Log("health = " + health);
                         if(health > 5){
                             dead();
                         }
@@ -78,6 +81,7 @@ public class BusinessManController : MonoBehaviour {
         Vector3 lookAt = FollowTarget.gameObject.transform.position;
         lookAt.y = this.gameObject.transform.position.y;
         this.transform.LookAt(lookAt);
+        chair.transform.LookAt(lookAt);
     }
     void jumpDown() {
         // anim.SetTrigger("Jump");
