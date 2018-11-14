@@ -18,6 +18,7 @@ public class BusinessManController : MonoBehaviour {
     public GameObject heartParticle;
     public bool isKissing;
     public GameObject girlfriend;
+    public GameObject chair;
 
     // Use this for initialization
     void Start() {
@@ -79,6 +80,7 @@ public class BusinessManController : MonoBehaviour {
         Vector3 lookAt = FollowTarget.gameObject.transform.position;
         lookAt.y = this.gameObject.transform.position.y;
         this.transform.LookAt(lookAt);
+        chair.transform.LookAt(lookAt);
     }
     void jumpDown() {
         // anim.SetTrigger("Jump");

@@ -27,6 +27,12 @@ public class PlayerMove : MonoBehaviour {
         } else {
             walk = 0;
         }
+        if(Input.GetKey(KeyCode.F)){
+            anim.SetBool("hit", true);
+        }else{
+            anim.SetBool("hit", false);
+        }
+
         anim.SetInteger("walk", walk);
         if (Input.GetKey(KeyCode.Space)) {
             jump = 1;
