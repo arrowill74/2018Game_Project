@@ -8,10 +8,7 @@ public class BusinessManController : MonoBehaviour {
     private Quaternion initRot;
     private Animator anim;
     private float health;
-    private bool onChair;
-    private bool alive;
-    private bool isKissing;
-  
+
     //public variables
     public Vector3 onGroundPos; //set the ground position
     public GameObject FollowTarget; //look toward Player
@@ -19,7 +16,9 @@ public class BusinessManController : MonoBehaviour {
     public GameObject heartParticle;
     public GameObject girlfriend;
     public GameObject chair;
-
+    public bool isKissing;
+    public bool alive;
+    public bool onChair;
 
     // Use this for initialization
     void Start() {

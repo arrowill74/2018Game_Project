@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 95364540395995166}
   - component: {fileID: 195619198456103862}
   - component: {fileID: 114875224864570346}
+  - component: {fileID: 114571841499368558}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -414,7 +415,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113901614457914}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.85, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4681010138097962}
@@ -438,6 +439,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114571841499368558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860774920831162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00121dd08b4f024d9bcd79499a7af8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  boyfriend: {fileID: 0}
 --- !u!114 &114875224864570346
 MonoBehaviour:
   m_ObjectHideFlags: 1

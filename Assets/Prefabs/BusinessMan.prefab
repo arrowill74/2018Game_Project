@@ -560,6 +560,11 @@ MonoBehaviour:
   FollowTarget: {fileID: 0}
   PlayerSensor: {fileID: 114474632293685736}
   heartParticle: {fileID: 1657705372649980}
+  girlfriend: {fileID: 0}
+  chair: {fileID: 0}
+  isKissing: 0
+  alive: 0
+  onChair: 0
 --- !u!114 &114474632293685736
 MonoBehaviour:
   m_ObjectHideFlags: 1
