@@ -6,6 +6,7 @@ TagManager:
   tags:
   - sensor
   - enemy
+  - man
   layers:
   - Default
   - TransparentFX
