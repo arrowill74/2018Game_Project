@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114125072302898488}
   m_Layer: 0
   m_Name: Scissors yellow
-  m_TagString: Untagged
+  m_TagString: throwTool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

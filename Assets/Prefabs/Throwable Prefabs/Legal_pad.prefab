@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114419527033494218}
   m_Layer: 0
   m_Name: Legal_pad
-  m_TagString: Untagged
+  m_TagString: throwTool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
