@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour {
     public int walk = 0;
     public int jump = 0;
     public bool isKissing = false;
+    public bool beAttack = false;
 
     // Use this for initialization
     void Start() {
@@ -55,5 +56,6 @@ public class PlayerMove : MonoBehaviour {
         }
 
     }
+
 }
 

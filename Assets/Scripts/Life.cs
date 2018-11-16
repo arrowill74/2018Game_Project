@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour {
-    Image img;
+    public Image img;
     // Use this for initialization
     void Start () {
         img = GetComponent<Image>(); //獲取Image元件
@@ -27,4 +27,7 @@ public class Life : MonoBehaviour {
         
         } 
     }
+
+    
+
 }
