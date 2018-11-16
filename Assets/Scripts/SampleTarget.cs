@@ -13,7 +13,7 @@ public class SampleTarget : MonoBehaviour {
         }
         void Update()
         {
-            if (Vector3.Distance(target.position, boyfriend.position) < 7.0f)
+            if (Vector3.Distance(target.position, boyfriend.position) < 5.0f)
             {
                 agent.SetDestination(target.position);
             }
