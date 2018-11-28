@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour {
     public int jump = 0;
     public bool isKissing = false;
     public bool beAttack = false;
+    public CollisionListScript collided;
+    public GameObject kissingMan;
 
     // Use this for initialization
     void Start() {
@@ -18,7 +20,6 @@ public class PlayerMove : MonoBehaviour {
         moveSpeed = 5f;
         rb = GetComponent<Rigidbody>();
         onGround = true;
-
     }
 
     // Update is called once per frame
@@ -28,12 +29,19 @@ public class PlayerMove : MonoBehaviour {
         } else {
             walk = 0;
         }
+        if(collided.target){
+            // Debug.Log(collided.target.name);
+            if(collided.target.tag == "sensor"){
+                // Debug.Log(collided.target.transform.parent.tag);
+                kissingMan = collided.target.transform.parent.gameObject;
+            }
+        }
         if(Input.GetKey(KeyCode.F)){
             anim.SetBool("hit", true);
         }else{
             anim.SetBool("hit", false);
         }
-
+        
         anim.SetInteger("walk", walk);
         if (Input.GetKey(KeyCode.Space)) {
             jump = 1;
@@ -48,7 +56,6 @@ public class PlayerMove : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space)) // And if the player press Space
             {
-
                 rb.AddRelativeForce(0f, 200f, 0f); // The sphere will jump
                 onGround = false; // The sphere can't jump if it's in the air
             }
