@@ -10,7 +10,7 @@ public class BeAttack : MonoBehaviour {
         if (collision.gameObject.tag == "throwTool")
         {
             this.LifeScript.img.fillAmount -= 0.1f; //扣血
-            Debug.Log("collision");
+            // Debug.Log("collision");
         }
         
         
