@@ -40,7 +40,7 @@ public class BossAction : MonoBehaviour {
 		// calculate the position for next change
 		if (positionToChange.Equals(onFloor)) {
 			positionToChange = onChair;
-			heartbeat.volume = 0;
+			heartbeat.volume = 1;
 
 		} else if (positionToChange.Equals(onChair)) {
 			int randomNum = Random.Range(0, 2);
