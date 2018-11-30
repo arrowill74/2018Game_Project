@@ -8,8 +8,9 @@ public class PlayerMove : MonoBehaviour {
     public Animator anim;
     public int walk = 0;
     public int jump = 0;
-
     private Rigidbody rb;
+    public CollisionListScript collided;
+    public GameObject kissingMan;
 
     // Use this for initialization
     void Start() {
@@ -24,12 +25,19 @@ public class PlayerMove : MonoBehaviour {
         } else {
             walk = 0;
         }
+        if(collided.target){
+            // Debug.Log(collided.target.name);
+            if(collided.target.tag == "sensor"){
+                // Debug.Log(collided.target.transform.parent.tag);
+                kissingMan = collided.target.transform.parent.gameObject;
+            }
+        }
         if(Input.GetKey(KeyCode.F)){
             anim.SetBool("hit", true);
         }else{
             anim.SetBool("hit", false);
         }
-
+        
         anim.SetInteger("walk", walk);
         if (Input.GetKey(KeyCode.Space)) {
             jump = 1;
@@ -38,13 +46,12 @@ public class PlayerMove : MonoBehaviour {
         }
         anim.SetInteger("jump", jump);
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 100f, 0);
+        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 70f, 0);
 
         if (onGround == true) // If the sphere is grounded
         {
             if (Input.GetKeyDown(KeyCode.Space)) // And if the player press Space
             {
-
                 rb.AddRelativeForce(0f, 200f, 0f); // The sphere will jump
                 onGround = false; // The sphere can't jump if it's in the air
             }

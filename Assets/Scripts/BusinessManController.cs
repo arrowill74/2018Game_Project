@@ -46,6 +46,7 @@ public class BusinessManController : MonoBehaviour {
                         // Debug.Log("health = " + health);
                         if(health > 5){
                             dead();
+                            Debug.Log(this.name + " is conquered");
                         }
                     }else{
                         anim.SetBool("Hit", false);
@@ -57,6 +58,8 @@ public class BusinessManController : MonoBehaviour {
             }
         }else if(!onChair){
             jumpUp();
+            anim.SetBool("Hit", false);
+            isKissing = false;
         }else{
             anim.SetBool("Waving", false);
             this.gameObject.transform.rotation = initRot;

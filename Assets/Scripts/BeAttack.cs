@@ -28,4 +28,5 @@ public class BeAttack : MonoBehaviour {
     void hideDamageEffect() {
         this.damageEffect.SetActive(false);
     }
+
 }
