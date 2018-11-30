@@ -15,12 +15,12 @@ public class BossAction : MonoBehaviour {
 
 	// private variables
 	private Vector3 positionToChange;
-	private AudioSource heartbeat;
+
 	// Use this for initialization
 	void Start () {
 		this.positionToChange = this.onFloor;
 		this.gameObject.transform.position = this.positionToChange;
-		heartbeat = gameObject.GetComponent<AudioSource>();
+
 		Invoke("changePosition", this.getChangePositionTime());
 	}
 
@@ -40,12 +40,12 @@ public class BossAction : MonoBehaviour {
 		// calculate the position for next change
 		if (positionToChange.Equals(onFloor)) {
 			positionToChange = onChair;
-			heartbeat.volume = 1;
 
 		} else if (positionToChange.Equals(onChair)) {
 			int randomNum = Random.Range(0, 2);
 			heartbeat.pitch = 0.8f;
 			heartbeat.volume = 1;
+
 			if (randomNum == 0) {
 				positionToChange = onFloor;
 			} else {
