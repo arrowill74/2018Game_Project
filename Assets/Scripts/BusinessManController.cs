@@ -58,6 +58,8 @@ public class BusinessManController : MonoBehaviour {
             }
         }else if(!onChair){
             jumpUp();
+            anim.SetBool("Hit", false);
+            isKissing = false;
         }else{
             anim.SetBool("Waving", false);
             this.gameObject.transform.rotation = initRot;
