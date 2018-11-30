@@ -8,7 +8,6 @@ TagManager:
   - enemy
   - man
   - throwTool
-  - gift
   layers:
   - Default
   - TransparentFX
