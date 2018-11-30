@@ -12698,19 +12698,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4256681061763678, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.06734627
+      value: 0.06734628
       objectReference: {fileID: 0}
     - target: {fileID: 4256681061763678, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.93219906
+      value: 0.932199
       objectReference: {fileID: 0}
     - target: {fileID: 4256681061763678, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.2660896
+      value: -0.26608965
       objectReference: {fileID: 0}
     - target: {fileID: 4256681061763678, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.23593605
+      value: 0.23593603
       objectReference: {fileID: 0}
     - target: {fileID: 4741958076535660, guid: a3783039c9fa7af4a8b4ae2300df3dde, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13201,7 +13201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wanderRadius: 5
-  wanderTimer: 0
+  wanderTimer: 3
 --- !u!1 &1219206771
 GameObject:
   m_ObjectHideFlags: 0
@@ -15282,7 +15282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c725a4b2b96f42c41b6ea17a06ec6aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 5
+  wanderRadius: 7
   wanderTimer: 1000
 --- !u!1001 &1525778603
 Prefab:
@@ -15814,7 +15814,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh10552
+  m_Name: pb_Mesh10558
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -17684,7 +17684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wanderRadius: 5
-  wanderTimer: 10
+  wanderTimer: 12
 --- !u!1 &1860967780
 GameObject:
   m_ObjectHideFlags: 0
