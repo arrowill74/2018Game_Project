@@ -18,7 +18,7 @@ public class Life : MonoBehaviour {
     }
 
     void TimeInjury(){
-        img.fillAmount -= 0.001f;
+        img.fillAmount -= 0.01f;
         if (img.fillAmount == 0) //if player life is over, cancel Invoke
         {
             CancelInvoke();
