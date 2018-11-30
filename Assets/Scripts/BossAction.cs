@@ -44,7 +44,7 @@ public class BossAction : MonoBehaviour {
 
 		} else if (positionToChange.Equals(onChair)) {
 			int randomNum = Random.Range(0, 2);
-			heartbeat.pitch = 1;
+			heartbeat.pitch = 0.8f;
 			heartbeat.volume = 1;
 			if (randomNum == 0) {
 				positionToChange = onFloor;
@@ -53,7 +53,7 @@ public class BossAction : MonoBehaviour {
 			}
 		} else {
 			positionToChange = onChair;
-			heartbeat.pitch = 1.2f;
+			heartbeat.pitch = 1.5f;
 		}
 
 		Invoke("changePosition", this.getChangePositionTime());
