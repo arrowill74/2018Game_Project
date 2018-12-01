@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
     public float moveSpeed;
-    public bool onGround = true; // Sphere grounded or not
+    public bool onGround; // Sphere grounded or not
+    private Rigidbody rb;
     public Animator anim;
     public int walk = 0;
     public int jump = 0;
-    private Rigidbody rb;
+    public bool isKissing = false;
+    public bool beAttack = false;
     public CollisionListScript collided;
     public GameObject kissingMan;
 
     // Use this for initialization
     void Start() {
+        anim = GetComponent<Animator>();
         moveSpeed = 5f;
         rb = GetComponent<Rigidbody>();
+        onGround = true;
     }
 
     // Update is called once per frame

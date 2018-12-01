@@ -15,10 +15,6 @@ public class ThrowableController : MonoBehaviour {
 		rigid.isKinematic = true;
 	}
 
-	void OnCollisionEnter(Collision collision) {
-		Destroy(this.gameObject, 2);
-	}
-
 	public void releaseItem() {
 		rigid.isKinematic = false;
 		this.transform.parent = null;
