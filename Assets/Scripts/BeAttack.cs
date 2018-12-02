@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class BeAttack : MonoBehaviour {
     public Life LifeScript; // Life's script
+    public GameObject damageEffect;
+    public AudioSource damageSound;
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "throwTool")
-        {
+    void Start() {
+        this.hideDamageEffect();
+    }
+
+    void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "throwTool") {
             this.LifeScript.img.fillAmount -= 0.005f; //扣血
-            // Debug.Log("collision");
+            
+            this.showDamageEffect();
+            Invoke("hideDamageEffect", 0.3f); // hide damage effect after 0.3s
         }
-        
-        
-    }
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "throwTool")
-        {
-            // Debug.Log("collision");
-        }
-
     }
         
-    
+    void showDamageEffect() {
+        this.damageEffect.SetActive(true);
+        this.damageSound.Play();
+    }
 
+    void hideDamageEffect() {
+        this.damageEffect.SetActive(false);
+    }
 }
