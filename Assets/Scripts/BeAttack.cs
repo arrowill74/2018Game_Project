@@ -13,7 +13,7 @@ public class BeAttack : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "throwTool") {
-            this.LifeScript.img.fillAmount -= 0.005f; //扣血
+            this.LifeScript.img.fillAmount -= 0.05f; //扣血
             
             this.showDamageEffect();
             Invoke("hideDamageEffect", 0.3f); // hide damage effect after 0.3s

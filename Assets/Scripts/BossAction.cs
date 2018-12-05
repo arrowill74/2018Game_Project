@@ -11,11 +11,15 @@ public class BossAction : MonoBehaviour {
 	public Vector3 onTable = new Vector3(-15.46f, 1.719f, -12.72f);
 	public int minTimeToChange = 2;
 	public int maxTimeToChange = 10;
-	public BusinessManController businessManScript;
+	// public BusinessManController businessManScript;
+	public PlayerMove playerMoveScript;
+
+	public AudioSource heartbeat;
+	public AudioSource heartbeatFast;
 
 	// private variables
 	private Vector3 positionToChange;
-	private AudioSource heartbeat;
+	
 	// Use this for initialization
 	void Start () {
 		this.positionToChange = this.onFloor;
@@ -25,7 +29,7 @@ public class BossAction : MonoBehaviour {
 	}
 
 	void Update () {
-		if(this.gameObject.transform.position.Equals(onTable) && businessManScript.isKissing) {
+		if(this.gameObject.transform.position.Equals(onTable) && playerMoveScript.kissingMan.GetComponent<BusinessManController>().isKissing) {
 			SceneManager.LoadScene("GameOverScene");
 		}
 	}
@@ -38,22 +42,23 @@ public class BossAction : MonoBehaviour {
 		this.gameObject.transform.position = positionToChange;
 
 		// calculate the position for next change
-		if (positionToChange.Equals(onFloor)) {
+		if (positionToChange.Equals(onFloor)) { // boss is now on floor
 			positionToChange = onChair;
-			heartbeat.volume = 1;
-
-		} else if (positionToChange.Equals(onChair)) {
+			heartbeat.enabled = false;
+			heartbeatFast.enabled = false;
+		} else if (positionToChange.Equals(onChair)) { // boss is now on chair
+			heartbeat.enabled = true;
+			heartbeatFast.enabled = false;
 			int randomNum = Random.Range(0, 2);
-			heartbeat.pitch = 1;
-			heartbeat.volume = 1;
 			if (randomNum == 0) {
 				positionToChange = onFloor;
 			} else {
 				positionToChange = onTable;
 			}
-		} else {
+		} else { // boss is now on table
 			positionToChange = onChair;
-			heartbeat.pitch = 1.2f;
+			heartbeat.enabled = false;
+			heartbeatFast.enabled = true;
 		}
 
 		Invoke("changePosition", this.getChangePositionTime());
