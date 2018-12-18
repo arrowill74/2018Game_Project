@@ -55,6 +55,7 @@ public class BusinessManController : MonoBehaviour {
                 }
             }else{
                 anim.SetBool("Waving", true);
+                chair.transform.rotation = this.transform.rotation;
             }
         }else if(!onChair){
             jumpUp();
@@ -63,6 +64,7 @@ public class BusinessManController : MonoBehaviour {
         }else{
             anim.SetBool("Waving", false);
             this.gameObject.transform.rotation = initRot;
+            chair.transform.rotation = initRot;
         }
     }
 
@@ -82,7 +84,6 @@ public class BusinessManController : MonoBehaviour {
         Vector3 lookAt = FollowTarget.gameObject.transform.position;
         lookAt.y = this.gameObject.transform.position.y;
         this.transform.LookAt(lookAt);
-        chair.transform.LookAt(lookAt);
     }
 
     void jumpDown() {
