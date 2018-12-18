@@ -14,25 +14,52 @@ public class EnemyController : MonoBehaviour {
     private NavMeshAgent agent;
 	private Animator anim;
 	private ThrowableController throwableScript;
-	
+	private Vector3 pos;
+	private float wanderRadius;
+    private float wanderTimer;
+    private float timer;
+
 	// Use this for initialization
 	void Start () {
 		anim = this.GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
-		// businessManScript = boyfriend.GetComponent<BusinessManController>();
+		wanderRadius = 20;
+		wanderTimer = 10;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		pos = this.transform.position; 
 		if (businessManScript.alive && !this.businessManScript.onChair) {
-			this.anim.SetTrigger("Attack");
-		}
-		if (Vector3.Distance(target.transform.position, boyfriend.transform.position) < 5.0f)
-        {
             agent.SetDestination(target.transform.position);
-        }
-            
+			this.anim.SetBool("Walk", true);
+			if(Vector3.Distance(target.transform.position, pos)<3f){
+				this.anim.SetBool("Walk", false);
+				this.anim.SetTrigger("Attack");
+			}
+        }else{
+			timer += Time.deltaTime;
+			if (timer >= wanderTimer) {
+				Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+				agent.SetDestination(newPos);		
+				timer = 1;
+			}
+			bool moving = agent.remainingDistance > agent.stoppingDistance;
+			this.anim.SetBool("Walk", moving);
+		}
 	}
+	
+	public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+ 
+        randDirection += origin;
+ 
+        NavMeshHit navHit;
+ 
+        NavMesh.SamplePosition (randDirection, out navHit, dist, layermask);
+ 
+        return navHit.position;
+    }
 
 	void throwItem () {
 		// Turn to target's direction then throw

@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 95364540395995166}
   - component: {fileID: 195619198456103862}
   - component: {fileID: 114875224864570346}
-  - component: {fileID: 114571841499368558}
+  - component: {fileID: 114245713043728034}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -337,7 +337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860774920831162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.841032, y: 0.01, z: -2.4305687}
+  m_LocalPosition: {x: 13.2, y: 0.01, z: -2.4305687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4951831508491480}
@@ -439,19 +439,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114571841499368558
+--- !u!114 &114245713043728034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860774920831162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00121dd08b4f024d9bcd79499a7af8f, type: 3}
+  m_Script: {fileID: 11500000, guid: c725a4b2b96f42c41b6ea17a06ec6aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  boyfriend: {fileID: 0}
 --- !u!114 &114875224864570346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,7 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   hand: {fileID: 1314322569997914}
-  businessManScript: {fileID: 0}
+  boyfriend: {fileID: 0}
   throwablePrefabs:
   - {fileID: 1268851328405912, guid: 0209b2dc0dd44ad41b8a77dd8c8d8bbd, type: 2}
   - {fileID: 1681976723871206, guid: 03ebe467ae6d8604ea96e4512a5fa446, type: 2}
@@ -473,6 +471,7 @@ MonoBehaviour:
   - {fileID: 1542916173322310, guid: 5ca4378654f44c946b1f01f98772528a, type: 2}
   - {fileID: 1555591306379772, guid: 620b5e1346d8e57498c5e581e1a59384, type: 2}
   - {fileID: 1659939497258554, guid: 892235128b66ff548b8c76da5f5055cc, type: 2}
+  businessManScript: {fileID: 0}
 --- !u!137 &137182628119371248
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -542,7 +541,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
