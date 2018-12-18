@@ -170,6 +170,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4716158376871928}
   - component: {fileID: 95105291575283220}
+  - component: {fileID: 114246078535229976}
+  - component: {fileID: 195962374299588960}
   m_Layer: 0
   m_Name: Santa
   m_TagString: Untagged
@@ -355,7 +357,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900218706672170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4479982012050050}
@@ -398,7 +400,7 @@ Animator:
   m_GameObject: {fileID: 1900218706672170}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d0a3eef10eb5f454480cec2153182063, type: 3}
-  m_Controller: {fileID: 9100000, guid: b1a465a5f848975458eb6a85298db987, type: 2}
+  m_Controller: {fileID: 9100000, guid: c19185ee34738d64db3c5f032e00b700, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -407,6 +409,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114246078535229976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900218706672170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faeef28aa80f0b488e046dd06038c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!137 &137442901906187820
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -463,3 +485,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000005066395, y: 0.58797204, z: 0.0011402965}
     m_Extent: {x: 0.7573378, y: 1.091099, z: 0.56766427}
   m_DirtyAABB: 0
+--- !u!195 &195962374299588960
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900218706672170}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

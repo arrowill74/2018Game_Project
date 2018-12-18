@@ -76,7 +76,7 @@ public class BusinessManController : MonoBehaviour {
             return false;
         }
     }
-
+ 
     void lookAtPlayer(){
         FollowTarget = PlayerSensor.target;
         Vector3 lookAt = FollowTarget.gameObject.transform.position;
@@ -84,6 +84,7 @@ public class BusinessManController : MonoBehaviour {
         this.transform.LookAt(lookAt);
         chair.transform.LookAt(lookAt);
     }
+
     void jumpDown() {
         // anim.SetTrigger("Jump");
         this.gameObject.transform.position = onGroundPos;
