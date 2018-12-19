@@ -7,7 +7,7 @@ public class Destroy : MonoBehaviour {
 	/*
 	 */
 	void Start () {
-		Destroy(gameObject, 4);
+		Destroy(gameObject, 5);
 		//銷毀(要銷毀的物件,幾秒後銷毀);
 		
 	}
