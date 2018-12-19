@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 114472228270883158}
   - component: {fileID: 64202584383911904}
   - component: {fileID: 82975471277406228}
+  - component: {fileID: 195885948082786756}
   m_Layer: 10
   m_Name: BusinessMan
   m_TagString: man
@@ -738,6 +739,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00000047683716, y: 0.21094045, z: 0.00064495206}
     m_Extent: {x: 0.7573378, y: 0.71406734, z: 0.5006447}
   m_DirtyAABB: 0
+--- !u!195 &195885948082786756
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654195317324074}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!198 &198234844690385800
 ParticleSystem:
   m_ObjectHideFlags: 1

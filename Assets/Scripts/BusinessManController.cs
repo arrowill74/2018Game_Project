@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BusinessManController : MonoBehaviour {
     //private variables
@@ -9,6 +10,7 @@ public class BusinessManController : MonoBehaviour {
     private Animator anim;
     private float health;
     private AudioSource loveSong;
+    private NavMeshAgent agent;
 
     //public variables
     public Vector3 onGroundPos; //set the ground position
@@ -24,6 +26,7 @@ public class BusinessManController : MonoBehaviour {
     void Start() {
         anim = this.GetComponent<Animator>();
         loveSong = this.GetComponent<AudioSource>();
+        agent = this.GetComponent<NavMeshAgent>();
         initPos = transform.position;
         initRot = transform.rotation;
         onChair = true;
@@ -40,6 +43,7 @@ public class BusinessManController : MonoBehaviour {
             if(alive){
                 if(onChair){
                     jumpDown();
+                    agent.enabled = true;
                 }else{
                     if(Input.GetKey(KeyCode.Space) && lookEachOther()){
                         anim.SetBool("Hit", true);
@@ -61,6 +65,7 @@ public class BusinessManController : MonoBehaviour {
                 chair.transform.rotation = this.transform.rotation;
             }
         }else if(!onChair){
+            agent.enabled = false;
             jumpUp();
             anim.SetBool("Hit", false);
             isKissing = false;
