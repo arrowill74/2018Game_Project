@@ -7,12 +7,10 @@ public class MenRemain : MonoBehaviour {
 	private GameObject[] men;
 	private Text canvasNum;
 	private int menNum;
-	private string content;
 	// Use this for initialization
 	void Start () {
 		men = (GameObject[])GameObject.FindGameObjectsWithTag("man");
 		canvasNum = gameObject.GetComponent<Text>();
-		content = "/6";
 	}
 	
 	// Update is called once per frame
@@ -23,6 +21,6 @@ public class MenRemain : MonoBehaviour {
 				menNum++;
 			}
 		}
-		canvasNum.text = menNum + content;
+		canvasNum.text = menNum.ToString();
 	}
 }
