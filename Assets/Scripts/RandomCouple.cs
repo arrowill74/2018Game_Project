@@ -43,8 +43,12 @@ public class RandomCouple : MonoBehaviour {
 			}
 		}
 		if(checkAllDied()){
-			SceneManager.LoadScene("MissionComplete");
+			Invoke("CompleteFunction", 1.5f);
 		}
+	}
+
+	void CompleteFunction(){
+		SceneManager.LoadScene("MissionComplete");
 	}
 
 	private bool checkAllDied(){
