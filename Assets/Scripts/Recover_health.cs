@@ -16,7 +16,7 @@ public class Recover_health : MonoBehaviour {
     }
 	void OnCollisionEnter(Collision collision){
         if (collision.gameObject.tag == "gift"){
-            this.LifeScript.img.fillAmount += 0.05f; //加血
+            this.LifeScript.img.fillAmount += 0.2f; //加血
             audiosource.PlayOneShot(impact);
         }
         	

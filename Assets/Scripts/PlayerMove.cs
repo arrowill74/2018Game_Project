@@ -33,31 +33,16 @@ public class PlayerMove : MonoBehaviour {
                 kissingMan = collided.target.transform.parent.gameObject;
             }
         }
-        if(Input.GetKey(KeyCode.F)){
+        if(Input.GetKey(KeyCode.Space)){
             anim.SetBool("hit", true);
         }else{
             anim.SetBool("hit", false);
         }
         
         anim.SetInteger("walk", walk);
-        if (Input.GetKey(KeyCode.Space)) {
-            jump = 1;
-        } else {
-            jump = 0;
-        }
-        anim.SetInteger("jump", jump);
+
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * 70f, 0);
-
-        if (onGround == true) // If the sphere is grounded
-        {
-            if (Input.GetKeyDown(KeyCode.Space)) // And if the player press Space
-            {
-                rb.AddRelativeForce(0f, 200f, 0f); // The sphere will jump
-                onGround = false; // The sphere can't jump if it's in the air
-            }
-
-        }
 
     }
 

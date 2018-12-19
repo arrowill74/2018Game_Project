@@ -14,7 +14,7 @@ public class Destroy : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision){
         if (collision.gameObject.tag == "Player"){
-            Debug.Log("get gift");
+            // Debug.Log("get gift");
             Destroy(gameObject);
             
         }

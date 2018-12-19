@@ -8,6 +8,7 @@ public class BusinessManController : MonoBehaviour {
     private Quaternion initRot;
     private Animator anim;
     private float health;
+    private AudioSource loveSong;
 
     //public variables
     public Vector3 onGroundPos; //set the ground position
@@ -22,6 +23,7 @@ public class BusinessManController : MonoBehaviour {
     // Use this for initialization
     void Start() {
         anim = this.GetComponent<Animator>();
+        loveSong = this.GetComponent<AudioSource>();
         initPos = transform.position;
         initRot = transform.rotation;
         onChair = true;
@@ -39,7 +41,7 @@ public class BusinessManController : MonoBehaviour {
                 if(onChair){
                     jumpDown();
                 }else{
-                    if(Input.GetKey(KeyCode.F) && lookEachOther()){
+                    if(Input.GetKey(KeyCode.Space) && lookEachOther()){
                         anim.SetBool("Hit", true);
                         isKissing = true;
                         health += Time.deltaTime;
@@ -47,6 +49,7 @@ public class BusinessManController : MonoBehaviour {
                         if(health > 5){
                             dead();
                             Debug.Log(this.name + " is conquered");
+                            loveSong.Play();
                         }
                     }else{
                         anim.SetBool("Hit", false);
