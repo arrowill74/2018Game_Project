@@ -21,7 +21,10 @@ public class EnemyDemo : MonoBehaviour {
 		anim = this.GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
 	}
-	
+	void OnEnable(){
+		this.transform.position = new Vector3(-13.731f, 0.02f, 9.6f);
+		
+	}
 	// Update is called once per frame
 	void Update () {
 		pos = this.transform.position; 

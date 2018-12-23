@@ -10,6 +10,6 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void openHint() {
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("Tutorial");
 	}
 }
