@@ -8353,7 +8353,7 @@ Prefab:
         type: 3}
     - target: {fileID: 1861345679374308, guid: a12250d8307876a4795495571cdf0758, type: 2}
       propertyPath: m_Name
-      value: QuitButton
+      value: HomeButton
       objectReference: {fileID: 0}
     - target: {fileID: 114551356912554728, guid: a12250d8307876a4795495571cdf0758,
         type: 2}
@@ -8379,7 +8379,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f7afecfb6e7cca843aab36051250120b,
+      objectReference: {fileID: 21300000, guid: da4c1a215d5f2e447bba98b1b4df12d3,
         type: 3}
     - target: {fileID: 114485866077013532, guid: a12250d8307876a4795495571cdf0758,
         type: 2}

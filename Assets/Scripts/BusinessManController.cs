@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class BusinessManController : MonoBehaviour {
     //private variables
@@ -21,6 +22,8 @@ public class BusinessManController : MonoBehaviour {
     public bool isKissing {get; private set;}
     public bool alive {get; private set;}
     public bool onChair {get; private set;}
+    public Slider healthBar;
+    public GameObject healthBarUI;
 
     // Use this for initialization
     void Start() {
@@ -37,6 +40,7 @@ public class BusinessManController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        healthBar.value = CalculateHealth();
         if(PlayerSensor.target){
             lookAtPlayer();
             lookEachOther();
@@ -76,6 +80,10 @@ public class BusinessManController : MonoBehaviour {
         }
     }
 
+    float CalculateHealth(){
+        return health/5;
+    }
+
     bool lookEachOther(){
         FollowTarget = PlayerSensor.target;
         float angle = Quaternion.Angle(this.transform.rotation, FollowTarget.transform.rotation);
@@ -109,6 +117,7 @@ public class BusinessManController : MonoBehaviour {
     }
 
     void dead() {
+        Destroy(healthBarUI);
         anim.SetBool("Hit", false);
         isKissing = false;
         anim.SetTrigger("Dead");

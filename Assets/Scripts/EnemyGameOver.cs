@@ -7,17 +7,14 @@ public class EnemyGameOver : MonoBehaviour {
 
 	public GameObject target; // should be Player
 	public GameObject hand;
-	// public GameObject boyfriend;
 	public GameObject throwablePrefab;
-	// public BusinessManController businessManScript;
 
-    private NavMeshAgent agent;
 	private Animator anim;
 	private ThrowableController throwableScript;
-	private Vector3 pos;
 	
 	void Start(){
-		throwableScript = this.throwablePrefab.GetComponent<ThrowableController>();
+		anim = this.GetComponent<Animator>();
+		anim.SetTrigger("Attack");
 	}
 
 	void throwItem () {
@@ -32,8 +29,7 @@ public class EnemyGameOver : MonoBehaviour {
 	}
 
 	GameObject initiateThrowableItem() {
-		// randomly select a prefab to initiate
-		// int randomIndex = Random.Range(0, this.throwablePrefab.Count);
+		// initiate prefab
 		return Instantiate(this.throwablePrefab, hand.transform, false);
 	}
 }

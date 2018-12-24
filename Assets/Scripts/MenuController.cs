@@ -12,4 +12,8 @@ public class MenuController : MonoBehaviour {
 	public void openHint() {
 		SceneManager.LoadScene("Tutorial");
 	}
+
+	public void quitGame() {
+		Application.Quit();
+	}
 }

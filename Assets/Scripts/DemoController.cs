@@ -18,8 +18,8 @@ public class DemoController : MonoBehaviour {
 	public void playDemo(int plus){
 		int current = playing;
 		int next = playing + plus;
-		Debug.Log(current);
-		Debug.Log(next);
+		// Debug.Log(current);
+		// Debug.Log(next);
 		Demos[next].SetActive(true);
 		Demos[current].SetActive(false);
 		if(next == Demos.Count-1){
