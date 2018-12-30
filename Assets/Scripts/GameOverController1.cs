@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverController : MonoBehaviour {
+public class GameOverController1 : MonoBehaviour {
 
 	public void playGame() {
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("Level1");
 	}
 
 	public void returnHome() {

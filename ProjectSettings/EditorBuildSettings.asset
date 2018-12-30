@@ -9,15 +9,33 @@ EditorBuildSettings:
     path: Assets/Scenes/HomePage.unity
     guid: 41e229d226fddc74b986bfe5012c217e
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: baa820039e2b5f740a931eec21bcc3a9
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/Scenes/Level1.unity
+    guid: 3cd6e625705bafb45b25de4f61a37374
+  - enabled: 1
+    path: Assets/Scenes/Level1GameOver.unity
+    guid: 43f51050e1b37164e9560115afe0ec15
+  - enabled: 1
+    path: Assets/Scenes/Level1Win.unity
+    guid: b437b1a20d574ac46b7dbcbfe5e25cb4
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 3c72e1fd6e6602041809df6134907052
+  - enabled: 1
+    path: Assets/Scenes/Level2GameOver.unity
+    guid: 9cf874c01da1bf3469e76632eb4e1d77
+  - enabled: 1
+    path: Assets/Scenes/Level2Win.unity
+    guid: 0f0c7a95104f50a49b4f9eb0ec3b3dfd
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level3GameOver.unity
     guid: bd88607c589ab254eafd2bc6bee5a85f
   - enabled: 1
-    path: Assets/Scenes/MissionComplete.unity
+    path: Assets/Scenes/Level3Win.unity
     guid: 10f6c703355648b42b12e1de32935ace
   m_configObjects: {}

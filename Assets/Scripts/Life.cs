@@ -6,16 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour {
     public Image img;
+    public LevelController levelControllerScript;
     // Use this for initialization
     void Start () {
         img = GetComponent<Image>(); //獲取Image元件
         InvokeRepeating("TimeInjury",0,1f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        //if he is attack by enemy 
-    }
 
     void TimeInjury(){
         img.fillAmount -= 0.01f;
@@ -23,8 +19,7 @@ public class Life : MonoBehaviour {
         {
             CancelInvoke();
             Debug.Log("沒血了");
-            SceneManager.LoadScene("GameOverScene"); //Turn to GameOverScene
-        
+            levelControllerScript.GameOverFunction();
         } 
     }
 

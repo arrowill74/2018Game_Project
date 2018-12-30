@@ -8,8 +8,6 @@ public class Recover_health : MonoBehaviour {
     public AudioClip impact;
     AudioSource audiosource;
 
-    
-
 	// Use this for initialization
     void Start(){
         audiosource = GetComponent<AudioSource>();

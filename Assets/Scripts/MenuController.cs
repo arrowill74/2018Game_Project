@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 	
 	public void playGame() {
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("Level1");
 	}
 
 	public void openHint() {
